@@ -11,7 +11,9 @@ public class PageSetup {
 
     @BeforeEach
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", projectLocation + "/resources/chromedriver.exe");
+        // drivers for Chrome 111
+        // use chromedriver for Linux or chromedriver.exe for Windows
+        System.setProperty("webdriver.chrome.driver", projectLocation + "/resources/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(ultimateQAURL);
