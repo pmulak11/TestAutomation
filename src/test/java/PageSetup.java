@@ -21,6 +21,6 @@ public class PageSetup {
 
     @AfterEach
     public void teardown() {
-        // driver.close();
+        //driver.close();
     }
 }
