@@ -58,5 +58,12 @@ public class UltimateQATest extends PageSetup {
         carDropDown.selectByVisibleText("Saab");
         Assertions.assertEquals("Saab", carDropDown.getFirstSelectedOption().getText());
     }
+    @Test
+    public void testLink() {
+        WebElement link = driver.findElement(By.name("clickableLink"));
+        link.click();
+        WebElement linkSuccess = driver.findElement(By.className("entry-title"));
+        Assertions.assertEquals("Link success", linkSuccess.getText());
+    }
 
 }
